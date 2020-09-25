@@ -15,7 +15,7 @@ def unzip_apk(analyze_apk):
     directory = analyze_apk.replace('.apk', '/')
     if not os.path.exists(directory):
 
-        command = "java -jar Libraries/apktool.jar d " + analyze_apk + " -o " + directory + " -f"
+        command = "java -jar libs/apktool.jar d " + analyze_apk + " -o " + directory + " -f"
         # print(command)
 
         p = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
